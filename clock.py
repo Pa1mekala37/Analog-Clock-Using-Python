@@ -47,7 +47,6 @@ class Clock():
         second = today.second + self.time_deltas[0] + today.microsecond * 1e-6
         minute = today.minute + self.time_deltas[1] + second / 60.
         hour = (today.hour + self.time_deltas[2] + minute / 60) % 12
-        # 设置朝向
         second_hand.setheading(6 * second)
         minute_hand.setheading(6 * minute)
         hour_hand.setheading(30 * hour)
